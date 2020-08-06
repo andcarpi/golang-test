@@ -1,9 +1,9 @@
 steps:
-    - id: "Buildando a imagem e rodando teste em GO"
-    name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/go-test-image', '.']
+  - id: "Buildando a imagem e rodando teste em GO"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/go-test-image', '.']
 
-    - id: "Enviando imagem para Image Registry"
-    name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/go-test-image']
-    images: ['gcr.io/$PROJECT_ID/go-test-image']
+  - id: "Enviando imagem para Image Registry"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/go-test-image']
+  images: ['gcr.io/$PROJECT_ID/go-test-image']
